@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 02</title>
+</head>
+<body>
+
+    <h3>1)Crie uma aplicação para efetuar cálculo aritméticos de soma e subtração.</h3>
+
+<p>1) Ao executar o script a aplicação deve solicitar a entrada de um número, seguido de
+    uma operação de soma ou subtração e posteriormente seguido de um segundo
+    número. </p>
+<p>2) A operação deve ser inserida pelo usuário de forma textual, ou seja, quando o sistema
+    solicita a operação o usuário deve informar o texto ‘soma’ ou ‘subtração’ (sem as
+    aspas). </p>
+<p>3) Na sequência o sistema deve enviar os parâmetros para uma função efetuar o devido
+    cálculo. Exemplo: calculo(num1, num2, operacao). </p>
+<p>A função deve executar o cálculo com base na operação informada pelo usuário e na
+    sequência deve retornar o valor encontrado. 
+    </p>
+<p>Ao término o sistema deve fornecer a seguinte saída para o usuário:</p>    
+</body>
+
+<script>
+
+var num1 = prompt('Digite um Número: ')
+var operacao = prompt("Escolha uma dessas operações (+ - * /)")
+var num2 = prompt('Digite outro número: ')
+
+function efetuarCalculo(num1, num2, operacao) {
+
+    num1 = parseFloat(num1)
+    num2= parseFloat(num2)
+
+    var resultado = 0
+
+    if (operacao == '+') {
+         resultado =  num1 + num2
+    }
+
+    if(operacao == '-') {
+    
+        resultado = num1 - num2
+    } 
+    if(operacao == '*') {
+    
+    resultado = num1 * num2
+}   
+if(operacao == '/') {
+    
+    resultado = num1 / num2
+}   
+    return resultado
+}
+
+document.write('<hr/>')
+document.write('O resultado é : ' + efetuarCalculo(num1, num2, operacao))
+
+</script>
+</html>

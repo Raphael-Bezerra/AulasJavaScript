@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funções Date</title>
+    <script>
+
+     var data = new Date()
+
+        /*document.write(data.getDate() + '/')
+        document.write(data.getMonth() + 1 + '/')
+        document.write(data.getFullYear() + '<br />')
+        
+        document.write(data.getHours() + ':' + data.getUTCMinutes() + 
+        ':' + data.getSeconds() + ':'+ data.getMilliseconds())
+
+        //adicionando e removendo dias 
+        document.write(data.toDateString())
+        data.setDate(data.getDate() + 1)
+        
+        document.write('<hr/>')
+        document.write(data.toDateString())
+
+        document.write('<br /> <br /><br /><hr/>')
+        
+        //adicionando e removendo meses
+        document.write(data.toString())
+        data.setMonth(data.getMonth() + 3)
+        
+        document.write('<hr/>')
+        document.write(data.toString())
+        
+        document.write('<br /> <br /><br /><hr/>')
+        //adicionando e removendo anos
+        document.write(data.toString())
+        data.setFullYear(data.getFullYear() + 2)
+        
+        document.write('<hr/>')
+        document.write(data.toString())*/
+
+         //Quantos dias existem entre essa duas datas?
+        //15/01/2021 ~ 23/02/2022
+
+        var data1 = new Date(2022, 0, 15)
+        var data2 = new Date(2022, 1, 23)
+
+        document.write('data1 = ' + data1.toDateString())
+        document.write('<hr/>')
+        document.write('data2 = ' +data2.toDateString())
+
+        document.write('<br /> <br /><br /><hr/>')
+       //converte data para algo que podemos calcular
+       document.write('data1 = ' + data1.getTime())
+       document.write('<hr/>')
+       document.write('data2 = ' + data2.getTime())
+
+       document.write('<br /><br /><hr/>')
+       //encontrar a quantidade de milissegundos entre a datae data2
+      
+
+       var millessegundo_entre_datas = Math.abs(data1.getTime() - data2.getTime()) // Transformando em número absoluto(positivo)
+       document.write('millessengundos entre as duas datas = ' + millessegundo_entre_datas) 
+       //1 dia tem 24 horas 
+       //cada hora 60 minutos
+       //cada minuto tem 60 segundos
+       //cada segundo tem 1000 milissegundos  
+       // quantos millessegundo existem em um dia? 
+       document.write('<hr/>')
+       var milessegundo_por_dia = (1*24*60*60*1000)
+       document.write('1 dia tem: ' + milessegundo_por_dia + ' milessegundos')
+       document.write('<hr/>')
+       document.write('A diferença entre data1 e data2 é de ' + millessegundo_entre_datas / milessegundo_por_dia + ' dias') 
+
+
+
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
