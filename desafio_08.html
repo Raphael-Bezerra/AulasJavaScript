@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 08</title>
+    <style>
+       .estilo1 {
+        background: #ffff00;
+       }
+    
+    </style>
+    <script>
+        function modificarBack() {
+            document.getElementById('campo').className = 'estilo1' 
+        }
+  
+
+        function validaCampo() {
+            var valorCampo = document.getElementById('campo').value
+
+            if(valorCampo.length < 3 && valorCampo.length > 0 ) {
+                document.getElementById('campo').style.background = 'red'
+            } else if(valorCampo.length == 0) {
+                document.getElementById('campo').style.background = 'white'
+                location.reload()
+            } else {
+                document.getElementById('campo').style.background = 'green'
+            }
+            
+        }
+
+        
+    </script>
+</head>
+<body>
+    <h3>Crie um campo e aplique os seguintes controles com base nos
+        eventos abaixo:</h3>
+
+    <p>No evento de foco modifique o background do input para amarelo.</p>
+    <p>Quando o campo perder o foco, recupere o seu respectivo valor e:  </p>
+    <p>Caso o conteúdo contido no campo tenha menos de 3 caracteres o mesmo
+        deve ter seu background alterado para vermelho. </p>
+    <p>Caso o conteúdo contido no campo tenha 3 caracteres ou mais o background
+        deve ser alterado para verde.</p>
+    <hr />
+
+    <input id="campo" onfocus="modificarBack()" onblur="validaCampo()" type="text">
+    
+</body>
+</html>

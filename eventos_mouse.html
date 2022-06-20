@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos Mouse</title>
+    <script>
+
+        function acao1() {
+            alert('Evento 1 disparado')
+        }
+
+        function acao2() {
+            alert('Evento 2 disparado')
+        }
+
+        function acao3() {
+            alert('Evento 3 disparado')
+        }
+        function acao4() {
+            alert('Evento 4 disparado')
+        }
+        function acao5() {
+            alert('Evento 5 disparado')
+        }
+
+        function acao6() {
+            alert('O elemento foi clicado')
+        }
+
+        function acao7() {
+            alert('O cursor do mouse deixou a região do elemento')
+        }
+    </script>
+</head>
+<body>
+ <table>
+    <td><div onclick="acao1()" style="background: #ccc; height: 150px; width: 150px;">onclick</div> </td> 
+    <td><div ondblclick="acao2()" style="background: #bdd; height: 150px; width: 150px;">ondblclick</div></td>
+    <td><div onmouseup="acao3()" style="background: #bddebd; height: 150px; width: 150px;">onmouseup</div></td>
+    <td><div onmouseover="acao4()" style="background: #6a72bb; height: 150px; width: 150px;">onmouseover</div></td>
+    <td><div onmouseout="acao5()" style="background: #6abb6e; height: 150px; width: 150px;">onmouseout</div></td>
+ </table>
+
+ <table>
+    <td><div onclick="acao6()" onmouseout="acao7()" style="background: #2bcac2; height: 150px; width: 150px;">onclick and onmouseout</div> </td> 
+ </table>
+ 
+    
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos Keyboard</title>
+    <script>
+
+        function acao1() {
+            alert('Evento disparado')
+        }
+
+        function acao2() {
+            alert('Evento 2 disparado')
+        }
+
+        function acao3() {
+            alert('Evento 3 disparado')
+        }
+        
+    </script>
+</head>
+<body>
+    <table>
+    
+    <tr>onkeydown <input onkeydown="acao1()" type="text"></tr>
+    <tr> onkeyup <input onkeyup="acao2()" type="text"></tr> 
+    <tr> onkeypress <input onkeypress="acao3()" type="text"></tr> <!-- só é disparado com um valor de caracter -->
+
+    </table>
+</body>
+</html>
