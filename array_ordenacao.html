@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Ordenação</title>
+    <script>
+
+         var lista_contas = Array()
+        
+         lista_contas[0] = 'Luz'
+         lista_contas[1] = 'Água'
+         lista_contas[2] = 'Internet'
+         lista_contas[3] = 'Cartão de Credito'
+
+         console.log(lista_contas.sort())
+
+         var lista_numeros = Array()
+        
+        lista_numeros[0] = 1
+        lista_numeros[1] = 13
+        lista_numeros[2] = 7
+        lista_numeros[3] = 28
+
+        console.log(lista_numeros.sort(ordenaNumeros))
+
+        function ordenaNumeros(a, b) {
+            return a - b
+            // < 0 a ordenado antes de b
+            // > 0 = b ordenado antes de a
+            // == ordem é mantida
+            // caso tenha um vaor en string havera um erro na ordenação
+        }
+    </script>
+</head>
+<body>
+   
+
+</body>
+</html>
